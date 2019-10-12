@@ -40,7 +40,7 @@ func New(config Config, prefix string) *yell {
 	} else {
 		config.Path = "./"
 	}
-	f, err := os.OpenFile(config.Path+"/"+config.FileName+"-"+time.Now().Month().String()+"-"+strconv.Itoa(time.Now().Day())+".log", os.O_CREATE|os.O_APPEND, 766)
+	f, err := os.OpenFile(config.Path+"/"+config.FileName+"-"+time.Now().Month().String()+"-"+strconv.Itoa(time.Now().Day())+".log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 766)
 	if err != nil {
 		return nil
 	}
