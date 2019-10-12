@@ -11,5 +11,5 @@ var log = yell.New(yell.Config{
 }, "[LOG]")
 
 func TestYell(t *testing.T) {
-	log.Println("nihao 你好")
+	log.Println("test")
 }
